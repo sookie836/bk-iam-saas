@@ -235,4 +235,3 @@ def batch_delete_subject_policy(subject_type: str, subject_ids: List[str]):
 
     # 清理临时权限
     TemporaryPolicy.objects.filter(subject_type=subject_type, subject_id__in=subject_ids).delete()
-
